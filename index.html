@@ -1,0 +1,427 @@
+<title>Bhavesh Kumar Reddy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Portfolio of Vundela Bhavesh Kumar Reddy, Python and backend developer in Bangalore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: navy "blazer" hero (expanded name + portrait), then an editorial body with section labels on the left and content on the right, closing on a navy contact band. */
+:root{
+  --bg:#EEF0F4;
+  --surface:#F8F9FB;
+  --ink:#141B2E;
+  --muted:#525B70;
+  --line:#D3D8E2;
+  --accent:#E3A238;
+  --accent-ink:#875605;
+  --band:#15203B;
+  --band-fg:#EEF1F7;
+  --band-muted:#AEB8CB;
+  --band-line:#2F3C5D;
+  --band-accent:#F0B44C;
+  --ok:#3DB37E;
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B111E; --surface:#111A2B; --ink:#E6E9F0; --muted:#9CA5B8; --line:#233049;
+    --accent:#F0B44C; --accent-ink:#F2BE62;
+    --band:#16213D; --band-fg:#EEF1F7; --band-muted:#A6B0C5; --band-line:#2E3C5E; --band-accent:#F0B44C;
+    --ok:#45C08A; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B111E; --surface:#111A2B; --ink:#E6E9F0; --muted:#9CA5B8; --line:#233049;
+  --accent:#F0B44C; --accent-ink:#F2BE62;
+  --band:#16213D; --band-fg:#EEF1F7; --band-muted:#A6B0C5; --band-line:#2E3C5E; --band-accent:#F0B44C;
+  --ok:#45C08A; color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+.wrap{max-width:1120px;margin-inline:auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+@media (min-width:720px){.wrap{padding-left:max(40px, env(safe-area-inset-left, 0px));padding-right:max(40px, env(safe-area-inset-right, 0px))}}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--band);color:var(--band-fg);padding-block:20px clamp(48px,7vw,80px)}
+.topnav{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.mark{color:var(--band-fg);text-decoration:none;border:1px solid var(--band-line);padding:5px 10px;font-weight:500;letter-spacing:.14em}
+.topnav ul{display:flex;gap:6px 22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.topnav ul a{color:var(--band-muted);text-decoration:none;padding-block:4px}
+.topnav ul a:hover{color:var(--band-fg)}
+
+.hero-grid{display:flex;flex-direction:column;align-items:center;gap:28px;margin-top:clamp(32px,5vw,56px);text-align:center}
+.hero-text{min-width:0;width:100%;display:flex;flex-direction:column;align-items:center}
+.eyebrow{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;color:var(--band-accent);margin:0 0 14px}
+h1{font-family:var(--f-display);font-stretch:125%;font-weight:800;font-size:clamp(2.4rem,6.2vw,4.9rem);line-height:.96;letter-spacing:-.025em;margin:0;text-wrap:balance}
+.lede{font-size:clamp(1.05rem,1.6vw,1.2rem);line-height:1.55;color:var(--band-muted);max-width:34em;margin:24px 0 0}
+.lede strong{color:var(--band-fg);font-weight:500}
+
+.spec{display:grid;grid-template-columns:7.5rem minmax(0,1fr);margin:28px 0 0;font-family:var(--f-mono);font-size:.84rem;border-top:1px solid var(--band-line);width:100%;max-width:36rem;text-align:left}
+.spec dt,.spec dd{padding:9px 0;border-bottom:1px solid var(--band-line);margin:0}
+.spec dt{color:var(--band-muted);text-transform:lowercase}
+.spec dd{color:var(--band-fg)}
+
+.cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-body);font-weight:600;font-size:.95rem;text-decoration:none;padding:11px 18px;border-radius:3px;border:1px solid var(--band-line);color:var(--band-fg);transition:background .15s,border-color .15s,color .15s}
+.btn:hover{border-color:var(--band-fg)}
+.btn.primary{background:var(--band-accent);border-color:var(--band-accent);color:var(--band)}
+.btn.primary:hover{background:var(--band-fg);border-color:var(--band-fg)}
+
+.portrait{margin:0;order:-1;display:flex;flex-direction:column;align-items:center;gap:14px}
+.portrait img{display:block;width:clamp(130px,15vw,170px);max-width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 40%;border-radius:50%;border:3px solid var(--band-accent);background:var(--band-line)}
+.status{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--band-line);color:var(--band-fg);font-family:var(--f-mono);font-size:.74rem;letter-spacing:.04em;padding:6px 10px;border-radius:3px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb, var(--ok) 30%, transparent)}
+
+/* ---------- Sections ---------- */
+.section{padding-block:clamp(56px,8vw,96px);border-bottom:1px solid var(--line)}
+.sec-grid{display:grid;grid-template-columns:210px minmax(0,1fr);gap:clamp(24px,4vw,64px)}
+.sec-label h2{font-family:var(--f-display);font-stretch:115%;font-weight:750;font-size:1.65rem;line-height:1.1;letter-spacing:-.01em;margin:0}
+.sec-label p{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);letter-spacing:.04em;margin:10px 0 0}
+.sec-body{min-width:0}
+
+h3{font-family:var(--f-display);font-stretch:108%;font-weight:700;font-size:1.3rem;line-height:1.2;margin:0;text-wrap:balance}
+.bullets{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.bullets li{position:relative;padding-left:22px;max-width:62ch}
+.bullets li::before{content:"";position:absolute;left:0;top:.72em;width:10px;height:2px;background:var(--accent)}
+.stack{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:18px 0 0;padding:0}
+.stack li{font-family:var(--f-mono);font-size:.74rem;padding:3px 9px;border:1px solid var(--line);border-radius:2px;color:var(--muted);background:var(--surface)}
+
+/* Experience */
+.role{display:grid;gap:22px}
+.role-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px 24px;flex-wrap:wrap}
+.org{margin:6px 0 0;color:var(--muted)}
+.when{font-family:var(--f-mono);font-size:.82rem;color:var(--accent-ink);margin:0;white-space:nowrap}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin:0;padding:0;list-style:none;border-block:1px solid var(--line)}
+.facts li{padding:16px 0;display:flex;align-items:baseline;gap:12px;min-width:0}
+.facts li + li{border-left:1px solid var(--line);padding-left:20px}
+.facts b{font-family:var(--f-display);font-stretch:125%;font-weight:800;font-size:2.2rem;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.facts span{color:var(--muted);font-size:.92rem;line-height:1.35}
+
+/* Projects */
+.projects{display:grid}
+.project{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);gap:16px 40px;padding-block:32px;border-top:1px solid var(--line)}
+.project:first-child{padding-top:0;border-top:0}
+.project:last-child{padding-bottom:0}
+.p-head{min-width:0}
+.p-kind{margin:8px 0 0;color:var(--muted);font-size:.95rem}
+.tag{display:inline-block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);border:1px solid currentColor;padding:1px 7px;border-radius:2px;margin-top:12px}
+.repo{display:block;margin-top:14px;font-family:var(--f-mono);font-size:.78rem;color:var(--ink);text-decoration:none;overflow-wrap:anywhere;line-height:1.45}
+.repo span{border-bottom:1px solid var(--accent)}
+.repo:hover span{border-bottom-width:2px}
+.p-body{min-width:0}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.skill{padding:20px 20px 22px 0;border-bottom:1px solid var(--line);min-width:0}
+.skill h3{font-family:var(--f-mono);font-stretch:100%;font-weight:500;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 10px}
+.skill p{margin:0;line-height:1.7}
+
+/* Education */
+.edu-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+.edu .when{display:block;margin-top:10px}
+.edu p{margin:8px 0 0;color:var(--muted)}
+.cgpa{display:flex;align-items:baseline;gap:8px;margin-top:18px}
+.cgpa b{font-family:var(--f-display);font-stretch:125%;font-weight:800;font-size:2.2rem;line-height:1;font-variant-numeric:tabular-nums}
+.cgpa span{color:var(--muted);font-family:var(--f-mono);font-size:.8rem}
+.certs{list-style:none;margin:0;padding:0;display:grid}
+.certs li{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px}
+.certs li:first-child{padding-top:0}
+.certs strong{font-weight:600}
+.certs small{grid-column:1;color:var(--muted);font-size:.88rem}
+.certs time{grid-column:2;grid-row:1;font-family:var(--f-mono);font-size:.8rem;color:var(--accent-ink)}
+.label{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+
+/* ---------- Contact ---------- */
+.contact{background:var(--band);color:var(--band-fg);padding-block:clamp(56px,8vw,96px)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,5vw,72px);align-items:start}
+.contact h2{font-family:var(--f-display);font-stretch:118%;font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.contact .sub{color:var(--band-muted);margin:18px 0 0;max-width:30em}
+.c-list{display:grid;border-top:1px solid var(--band-line)}
+.c-row{display:grid;grid-template-columns:6.5rem minmax(0,1fr) auto;align-items:center;gap:8px 16px;padding:16px 0;border-bottom:1px solid var(--band-line)}
+.c-label{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--band-muted)}
+.c-val{color:var(--band-fg);text-decoration:none;font-size:1.02rem;overflow-wrap:anywhere;min-width:0}
+a.c-val:hover{color:var(--band-accent)}
+.copy{font-family:var(--f-mono);font-size:.74rem;background:transparent;color:var(--band-accent);border:1px solid var(--band-line);border-radius:3px;padding:5px 10px;cursor:pointer}
+.copy:hover{border-color:var(--band-accent)}
+
+.foot{background:var(--band);color:var(--band-muted);font-family:var(--f-mono);font-size:.74rem;letter-spacing:.04em;border-top:1px solid var(--band-line)}
+.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;padding-block:22px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:880px){
+  .sec-grid{grid-template-columns:minmax(0,1fr)}
+  .project{grid-template-columns:minmax(0,1fr)}
+  .skills{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contact-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:600px){
+  .topnav ul{gap:4px 16px}
+  .skills{grid-template-columns:minmax(0,1fr)}
+  .skill{padding-right:0}
+  .edu-grid{grid-template-columns:minmax(0,1fr)}
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .facts li + li{border-left:0;border-top:1px solid var(--line);padding-left:0}
+  .spec{grid-template-columns:6rem minmax(0,1fr)}
+  .c-row{grid-template-columns:minmax(0,1fr) auto}
+  .c-label{grid-column:1 / -1}
+}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <nav class="topnav" aria-label="Sections">
+      <a class="mark" href="#top" id="top">VBKR</a>
+      <ul>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Vundela</p>
+        <h1>Bhavesh<br>Kumar Reddy</h1>
+        <p class="lede"><strong>Python and backend developer.</strong> Final-year Computer Science student at GITAM University, Bangalore. I build FastAPI services, event-driven systems on AWS and apps that put large language models to work.</p>
+
+        <dl class="spec">
+          <dt>Focus</dt><dd>Python · FastAPI · AWS serverless · LLM apps</dd>
+          <dt>Studying</dt><dd>B.Tech CSE, GITAM University · class of 2027</dd>
+          <dt>Based in</dt><dd>Bangalore, Karnataka</dd>
+        </dl>
+
+        <div class="cta">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn" href="https://github.com/Boi-Talk13" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn" href="https://www.linkedin.com/in/bhavesh-kumar-reddy-vundela-357545293" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+
+      <figure class="portrait">
+        <img src="photo.jpg" alt="Portrait of Bhavesh Kumar Reddy in a navy blazer" width="480" height="480">
+        <span class="status"><i aria-hidden="true"></i>Open to Graduate Engineer Trainee roles</span>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="experience">
+    <div class="wrap sec-grid">
+      <div class="sec-label">
+        <h2>Experience</h2>
+        <p>May – Sep 2026</p>
+      </div>
+      <div class="sec-body">
+        <article class="role">
+          <header class="role-head">
+            <div>
+              <h3>Backend Developer</h3>
+              <p class="org">Prajna, Leaderboard Module · GITAM University</p>
+            </div>
+            <p class="when">May 2026 – Sep 2026</p>
+          </header>
+
+          <ul class="facts">
+            <li><b>3</b><span>GITAM campuses ranked in one leaderboard</span></li>
+            <li><b>2</b><span>ranking windows kept live: monthly and all-time</span></li>
+          </ul>
+
+          <ul class="bullets">
+            <li>Built a leaderboard that ranks faculty across 3 GITAM campuses using AWS Lambda and DynamoDB.</li>
+            <li>Updated monthly and all-time rankings on every score change through EventBridge events.</li>
+            <li>Made event processing idempotent, and skipped broken events instead of retrying them forever.</li>
+            <li>Kept each campus's data separate in a single DynamoDB table, with role-based access control.</li>
+            <li>Built the top-performers view (top ranks plus the user's own rank) and a monthly reset job.</li>
+          </ul>
+
+          <ul class="stack" aria-label="Tools used">
+            <li>AWS Lambda</li><li>EventBridge</li><li>DynamoDB</li><li>API Gateway</li><li>TypeScript</li><li>LocalStack</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="wrap sec-grid">
+      <div class="sec-label">
+        <h2>Projects</h2>
+        <p>2 solo · 1 team of 8</p>
+      </div>
+      <div class="sec-body projects">
+        <article class="project">
+          <div class="p-head">
+            <h3>Quiz Generator</h3>
+            <p class="p-kind">Full-stack serverless app on AWS</p>
+            <span class="tag">Solo project</span>
+            <a class="repo" href="https://github.com/Boi-Talk13/QuizGenerator" target="_blank" rel="noopener"><span>Boi-Talk13/QuizGenerator</span> ↗</a>
+          </div>
+          <div class="p-body">
+            <ul class="bullets">
+              <li>Generates quizzes with adjustable difficulty, hints and explanations using Groq (Llama 3.3 70B).</li>
+              <li>Built 5 REST endpoints, a Lambda function and 2 DynamoDB tables, all deployed with AWS CDK.</li>
+              <li>Added user login, score history and a timed quiz flow in the React frontend.</li>
+            </ul>
+            <ul class="stack" aria-label="Tools used">
+              <li>AWS CDK</li><li>Lambda</li><li>DynamoDB</li><li>React</li><li>TypeScript</li><li>Groq LLM API</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="p-head">
+            <h3>MedCite</h3>
+            <p class="p-kind">Drug Q&amp;A chatbot with LLM and RAG</p>
+            <span class="tag">Team of 8</span>
+            <a class="repo" href="https://github.com/Boi-Talk13/Drug-Information-Q-A-Chatbot" target="_blank" rel="noopener"><span>Boi-Talk13/Drug-Information-Q-A-Chatbot</span> ↗</a>
+          </div>
+          <div class="p-body">
+            <ul class="bullets">
+              <li>Wrote LLM prompts that answer only from the official drug PDF, and say so when the PDF has no answer.</li>
+              <li>Checked every page citation against the source PDF, so each link opens the correct page.</li>
+              <li>Handled short follow-up questions by combining them with the earlier question in the chat.</li>
+            </ul>
+            <ul class="stack" aria-label="Tools used">
+              <li>Python</li><li>FastAPI</li><li>Groq LLM API</li><li>PostgreSQL</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="p-head">
+            <h3>File Ingestion and Type Detection</h3>
+            <p class="p-kind">Bulk upload service with duplicate detection</p>
+            <span class="tag">Solo project</span>
+            <a class="repo" href="https://github.com/Boi-Talk13/File-Ingestion-Type-Detection" target="_blank" rel="noopener"><span>Boi-Talk13/File-Ingestion-Type-Detection</span> ↗</a>
+          </div>
+          <div class="p-body">
+            <ul class="bullets">
+              <li>Built a FastAPI service that takes bulk file uploads and returns each file's type, size and SHA-256 hash.</li>
+              <li>Added hash-based duplicate detection and automatic ZIP extraction, including nested folders.</li>
+            </ul>
+            <ul class="stack" aria-label="Tools used">
+              <li>Python</li><li>FastAPI</li><li>python-magic</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="wrap sec-grid">
+      <div class="sec-label">
+        <h2>Skills</h2>
+        <p>Strongest in Python and SQL</p>
+      </div>
+      <div class="sec-body skills">
+        <div class="skill"><h3>Languages</h3><p>Python · SQL · Java · C · JavaScript · TypeScript · HTML · CSS</p></div>
+        <div class="skill"><h3>Backend &amp; databases</h3><p>FastAPI · Node.js · REST APIs · PostgreSQL · DynamoDB</p></div>
+        <div class="skill"><h3>Cloud</h3><p>AWS Lambda · API Gateway · EventBridge · DynamoDB · CDK · IAM · Cognito</p></div>
+        <div class="skill"><h3>AI &amp; LLM</h3><p>Groq API (Llama 3.3 70B) · RAG pipelines · Prompt engineering</p></div>
+        <div class="skill"><h3>Frontend &amp; tools</h3><p>React · Vite · Git · GitHub · LocalStack</p></div>
+        <div class="skill"><h3>Core concepts</h3><p>Data structures · Algorithms · OOP · DBMS · Operating systems · Event-driven design</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="wrap sec-grid">
+      <div class="sec-label">
+        <h2>Education</h2>
+        <p>GITAM · 2023 – 2027</p>
+      </div>
+      <div class="sec-body edu-grid">
+        <div class="edu">
+          <p class="label">Degree</p>
+          <h3>B.Tech in Computer Science and Engineering</h3>
+          <span class="when">Aug 2023 – May 2027</span>
+          <p>GITAM University, Bangalore</p>
+          <div class="cgpa"><b>7.7</b><span>/ 10 CGPA</span></div>
+          <p>Coursework: Data Structures, OOP, DBMS, Operating Systems, Computer Networks</p>
+        </div>
+        <div>
+          <p class="label">Certifications</p>
+          <ul class="certs">
+            <li><strong>Python 101 for Data Science</strong><time>2025</time><small>IBM Developer Skills Network</small></li>
+            <li><strong>Google AI-ML Virtual Internship</strong><time>2025</time><small>AICTE EduSkills and Google for Developers</small></li>
+            <li><strong>Front-End Software Engineering Job Simulation</strong><time>2025</time><small>Skyscanner, via Forage</small></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Hiring for a Python or backend role? Let's talk.</h2>
+      <p class="sub">I graduate in May 2027 and I'm looking for Graduate Engineer Trainee (Python) roles. Email is the quickest way to reach me.</p>
+    </div>
+    <div class="c-list">
+      <div class="c-row">
+        <span class="c-label">Email</span>
+        <a class="c-val" id="email" href="mailto:bhaveshkumarreddy.v7806@gmail.com">bhaveshkumarreddy.v7806@gmail.com</a>
+        <button class="copy" id="copy-email" type="button" data-copy="bhaveshkumarreddy.v7806@gmail.com">Copy</button>
+      </div>
+      <div class="c-row">
+        <span class="c-label">LinkedIn</span>
+        <a class="c-val" href="https://www.linkedin.com/in/bhavesh-kumar-reddy-vundela-357545293" target="_blank" rel="noopener">bhavesh-kumar-reddy-vundela ↗</a>
+      </div>
+      <div class="c-row">
+        <span class="c-label">GitHub</span>
+        <a class="c-val" href="https://github.com/Boi-Talk13" target="_blank" rel="noopener">Boi-Talk13 ↗</a>
+      </div>
+      <div class="c-row">
+        <span class="c-label">Location</span>
+        <span class="c-val">Bangalore, Karnataka, India</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Vundela Bhavesh Kumar Reddy</span>
+    <span>Bangalore · 2026</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('copy-email');
+  var email = document.getElementById('email');
+  if (!btn || !email) return;
+  function flash(msg){
+    btn.textContent = msg;
+    clearTimeout(btn._t);
+    btn._t = setTimeout(function(){ btn.textContent = 'Copy'; }, 1800);
+  }
+  function selectEmail(){
+    try {
+      var r = document.createRange(); r.selectNodeContents(email);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      flash('Selected');
+    } catch (e) { flash('Copy failed'); }
+  }
+  btn.addEventListener('click', function(){
+    var text = btn.getAttribute('data-copy');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ flash('Copied'); }, selectEmail);
+    } else { selectEmail(); }
+  });
+})();
+</script>
